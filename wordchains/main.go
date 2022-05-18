@@ -1,10 +1,11 @@
 package main
 
 import (
-	"WordChains/wordchains"
 	"fmt"
 	"os"
 )
+
+type Words map[string]bool
 
 func main() {
 	if len(os.Args) != 3 {
@@ -18,7 +19,7 @@ func main() {
 		return
 	}
 
-	w := &wordchains.Words{}
+	w := &Words{}
 	if err := w.GetEnglishWords(); err != nil {
 		fmt.Println("Error reading words from file : " + err.Error())
 		return

@@ -3,11 +3,10 @@ all: go
 exec = wordchains
 
 go: main.go
-	go test ./wordchains/
-	go build -o bin/$(exec) main.go
+	go test ./
+	go build -o bin/$(exec) *.go
 
 clean:
 	rm -f bin/$(exec) *~ *#
-	rm -rf src/gopkg.in
 
 re: clean all

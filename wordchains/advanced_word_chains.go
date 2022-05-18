@@ -1,4 +1,4 @@
-package wordchains
+package main
 
 import (
 	"fmt"

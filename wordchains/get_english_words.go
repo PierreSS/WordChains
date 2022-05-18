@@ -1,15 +1,13 @@
-package wordchains
+package main
 
 import (
 	"bufio"
 	"os"
 )
 
-type Words map[string]bool
-
 // Retrieve all words from english_words file and return as a map string of string
 func (w *Words) GetEnglishWords() error {
-	file, err := os.Open("wordchains/english_words")
+	file, err := os.Open("english_words")
 	if err != nil {
 		return err
 	}
